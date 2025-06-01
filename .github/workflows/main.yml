@@ -1,1 +1,63 @@
+const fs = require('fs');
+if (fs.existsSync('config.env')) require('dotenv').config({ path: './config.env' });
 
+module.exports = {
+  "SESSION_ID": process.env.SESSION_ID || "eyJub2lzZUtleSI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoia0VDSE8reGM4NmdDMWNMR2czNWI4V3hEWEc4MG9vMytsbUI2QTJsczVrbz0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiVHlqZUl4a3NxVFU5K2ZaSU5NYzVrY3IxTElVU013SExMaVlQaWVkM0hETT0ifX0sInBhaXJpbmdFcGhlbWVyYWxLZXlQYWlyIjp7InByaXZhdGUiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJ3SDNZVXduWXg0YWZ1WTJlUC9qWHhUVnRCdE5ranUrM3JYaXlZYllpcFdRPSJ9LCJwdWJsaWMiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJNVUl0YnlEcFhPYVM4WlhVdnJMYklWV09BNUYxWjhxNnppNnJVTkFhRkRvPSJ9fSwic2lnbmVkSWRlbnRpdHlLZXkiOnsicHJpdmF0ZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IjBMT2N3THk0bnovbXgxOHprRlZ3Z0ZQaG5ZUGo4ZTI0Qzl3MTVzTVQ1VVE9In0sInB1YmxpYyI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IitDZFhWRWRpOWVaZFpEWS9uYjRNa2o0TW53Y1d4QVVBRXpHTzdmWnNGMU09In19LCJzaWduZWRQcmVLZXkiOnsia2V5UGFpciI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiOEt5UjJlNkloemN5VXlVSUpiVGVFeEJZNHFIQ2xKYk5lTVRlTGNQamxrOD0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiTGN0SSt4L2VGZEIrUVJMZmE2K1IzZklWT0Z4dTUvUGc3dnhDZHNoU1ZpOD0ifX0sInNpZ25hdHVyZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6InZ5UWRUcDZRR1RtQTgwbDlkdUR2Q0VUNlhoTHIvdFVKeUt4citZdnJRZUJxRDRJVUtyT21YZllCcXM3VjF2bXdnVSsvbE9YU2sxbzlpVExOcnN5U2pRPT0ifSwia2V5SWQiOjF9LCJyZWdpc3RyYXRpb25JZCI6MjUyLCJhZHZTZWNyZXRLZXkiOiIySHRKdWNCOE9IZjA2enVtcU9qdi9KQmx5VTh4b3JhS1VRY3V3d0s2c2RJPSIsInByb2Nlc3NlZEhpc3RvcnlNZXNzYWdlcyI6W10sIm5leHRQcmVLZXlJZCI6MzEsImZpcnN0VW51cGxvYWRlZFByZUtleUlkIjozMSwiYWNjb3VudFN5bmNDb3VudGVyIjowLCJhY2NvdW50U2V0dGluZ3MiOnsidW5hcmNoaXZlQ2hhdHMiOmZhbHNlfSwicmVnaXN0ZXJlZCI6ZmFsc2UsImFjY291bnQiOnsiZGV0YWlscyI6IkNLdkc4c01ERU4yZzFjRUdHQUVnQUNnQSIsImFjY291bnRTaWduYXR1cmVLZXkiOiJwNTRDdnM3M0NoaWlDaFpvbUQ0N1BUVjJaNnZoTUl6VW1KR1RiNDFqanlzPSIsImFjY291bnRTaWduYXR1cmUiOiI1VWRvcGRLRkkza2E0Y1RIM01oWEx5WHdaZUNaaFVLblBmelJ1RlJJT3JEd3AzN2ViSEZxV0tZNXVoUkMzOFFURTUzVENMRng3QmwzcUV2M2c4by9Ddz09IiwiZGV2aWNlU2lnbmF0dXJlIjoiSHE4akh6VjhoYjQ0b3hJcXBLRUsrTnhrZTRXa0puVEJRcTYzektua0Q4MElBamJSMVIrdExHZnROc0psYW9SWEMrbW1nc2xMakZqNllFRkI3cGw1Z3c9PSJ9LCJtZSI6eyJpZCI6IjI1NTc4NTI2MTA0NzozQHMud2hhdHNhcHAubmV0IiwibmFtZSI6In5TYWxseSIsImxpZCI6Ijc5MjA0MTEyNzExNjkwOjNAbGlkIn0sInNpZ25hbElkZW50aXRpZXMiOlt7ImlkZW50aWZpZXIiOnsibmFtZSI6IjI1NTc4NTI2MTA0NzozQHMud2hhdHNhcHAubmV0IiwiZGV2aWNlSWQiOjB9LCJpZGVudGlmaWVyS2V5Ijp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiQmFlZUFyN085d29Zb2dvV2FKZytPejAxZG1lcjRUQ00xSmlSazIrTlk0OHIifX1dLCJwbGF0Zm9ybSI6InNtYmEiLCJyb3V0aW5nSW5mbyI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IkNCSUlCUT09In0sImxhc3RBY2NvdW50U3luY1RpbWVzdGFtcCI6MTc0ODMyNDQ2MCwibGFzdFByb3BIYXNoIjoiM2dQVUprIn0=",
+  "ALIVE_IMG": process.env.ALIVE_IMG || "https://raw.githubusercontent.com/HyHamza/HyHamza/refs/heads/main/Images/logo.jpg",
+  "PREFIX": process.env.PREFIX || ".",
+  "AUTO_READ_STATUS": process.env.AUTO_READ_STATUS === 'true',
+  "MODE": process.env.MODE || "public",
+  "OWNER_NUMBER": process.env.OWNER_NUMBER || "255785261047",
+  "OWNER_NAME": process.env.OWNER_NAME || "salum",
+  "ALWAYS_ONLINE": process.env.ALWAYS_ONLINE === 'true',
+  "PRESENCE": process.env.PRESENCE || "online",
+  "OMDB_API_KEY": process.env.OMDB_API_KEY || "76cb7f39",
+  "READ_CMD": process.env.READ_CMD === 'true',
+  "AUTO_VOICE": process.env.AUTO_VOICE === 'true',
+  "AUTO_STICKER": process.env.AUTO_STICKER === 'true',
+  "AUTO_REPLY": process.env.AUTO_REPLY === 'true',
+  "AUTO_REACT": process.env.AUTO_REACT === 'true',
+  "WELCOME": process.env.WELCOME === 'true',
+  "ANTI_BAD": process.env.ANTI_BAD === 'true',
+  "ANTI_LINK": process.env.ANTI_LINK === 'true',
+  "ANTI_GROUP_LINK": process.env.ANTI_GROUP_LINK === 'true',
+  "ANTI_DELETE": process.env.ANTI_DELETE === 'true',
+  "ANTI_VIEW_ONCE": process.env.ANTI_VIEW_ONCE === 'true',
+  "ANTI_BOT": process.env.ANTI_BOT === 'true',
+  "PREMIUM_USERS": process.env.PREMIUM_USERS || "1",
+  "COUNTRY_BLOCK": process.env.COUNTRY_BLOCK === 'true',
+  "COUNTRY_BLOCK_CODE": process.env.COUNTRY_BLOCK_CODE || "255",
+  "EMOJI": process.env.EMOJI || "🙄",
+  "AUTO_TYPING": process.env.AUTO_TYPING === 'true'
+};const fs = require('fs');
+if (fs.existsSync('config.env')) require('dotenv').config({ path: './config.env' });
+
+module.exports = {
+  "SESSION_ID": process.env.SESSION_ID || "",
+  "ALIVE_IMG": process.env.ALIVE_IMG || "https://raw.githubusercontent.com/HyHamza/HyHamza/refs/heads/main/Images/logo.jpg",
+  "PREFIX": process.env.PREFIX || ".",
+  "AUTO_READ_STATUS": process.env.AUTO_READ_STATUS === 'true',
+  "MODE": process.env.MODE || "public",
+  "OWNER_NUMBER": process.env.OWNER_NUMBER || "255785261047",
+  "OWNER_NAME": process.env.OWNER_NAME || "salum",
+  "ALWAYS_ONLINE": process.env.ALWAYS_ONLINE === 'true',
+  "PRESENCE": process.env.PRESENCE || "online",
+  "OMDB_API_KEY": process.env.OMDB_API_KEY || "76cb7f39",
+  "READ_CMD": process.env.READ_CMD === 'true',
+  "AUTO_VOICE": process.env.AUTO_VOICE === 'true',
+  "AUTO_STICKER": process.env.AUTO_STICKER === 'true',
+  "AUTO_REPLY": process.env.AUTO_REPLY === 'true',
+  "AUTO_REACT": process.env.AUTO_REACT === 'true',
+  "WELCOME": process.env.WELCOME === 'true',
+  "ANTI_BAD": process.env.ANTI_BAD === 'true',
+  "ANTI_LINK": process.env.ANTI_LINK === 'true',
+  "ANTI_GROUP_LINK": process.env.ANTI_GROUP_LINK === 'true',
+  "ANTI_DELETE": process.env.ANTI_DELETE === 'true',
+  "ANTI_VIEW_ONCE": process.env.ANTI_VIEW_ONCE === 'true',
+  "ANTI_BOT": process.env.ANTI_BOT === 'true',
+  "PREMIUM_USERS": process.env.PREMIUM_USERS || "1",
+  "COUNTRY_BLOCK": process.env.COUNTRY_BLOCK === 'true',
+  "COUNTRY_BLOCK_CODE": process.env.COUNTRY_BLOCK_CODE || "255",
+  "EMOJI": process.env.EMOJI || "🙄",
+  "AUTO_TYPING": process.env.AUTO_TYPING === 'true'
+};
